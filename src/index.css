@@ -41,10 +41,32 @@ body::-webkit-scrollbar {
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.reveal-l {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-l.visible-l {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-r {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-r.visible-r {
+  opacity: 1;
+  transform: translateX(0);
 }

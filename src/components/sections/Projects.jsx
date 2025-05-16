@@ -1,8 +1,13 @@
 import { RevealOnScroll } from "../RevealOnScroll"
+import { EnterL } from "../EnterL"
+import { EnterR } from "../EnterR"
 
 export const Projects = () => {
     return (
-        <section id="projects" className="min-h-screen flex item-center justify-center py-20">
+        <section id="projects" className="min-h-screen flex items-center justify-center py-20 relative">
+            <EnterL>
+                <div className="left-0 top-1/2 -translate-y-1/2 w-16 h-64 bg-red-900/20 rounded"></div>
+            </EnterL>
             <RevealOnScroll>
                 <div className="max-w-4xl mx-auto px-4">
                     <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 text-center bg-clip-text text-transparent">Featured Projects</h2>
@@ -26,8 +31,8 @@ export const Projects = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="p-6 rounded-xl border border-white hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
                             <h3 className="text-xl font-bold mb-2">Elevate</h3>
-                            <div className="bg-[url('assets/images/ev.png')] bg-cover w-full h-50 rounded-xl"></div>
-                            <p className="text-gray-400 mb-4"></p>
+                            <div className="bg-[url('assets/images/ev.png')] bg-cover bg-center w-full h-50 rounded-xl mb-6"></div>
+                            <p className="text-gray-400 mb-4">Elevate, a sleek and responsive gym and fitness shopping website built with HTML, CSS, JavaScript, and Bootstrap. It showcases workout gear, supplements, and fitness equipment. Users can easily browse categories, view product details, and add items to their cart in a clean, mobile-friendly interface.</p>
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {["Bootstrap", "JavaScript", "CSS", "HTML"].map((tech, key) => (
                                     <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full textpsm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">{tech}</span>
@@ -39,10 +44,10 @@ export const Projects = () => {
                         </div>
                         <div className="p-6 rounded-xl border border-white hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
                             <h3 className="text-xl font-bold mb-2">Password Guess'r</h3>
-                            <div className="bg-[url('assets/images/pc.png')] bg-cover w-full h-50 rounded-xl"></div>
-                            <p className="text-gray-400 mb-4"></p>
+                            <div className="bg-[url('assets/images/pc.png')] bg-cover bg-center w-full h-50 rounded-xl mb-6"></div>
+                            <p className="text-gray-400 mb-4">P. Guess'r is a simple, browser-based word guessing game built with pure HTML, CSS, and JavaScript. Players try to guess a hidden word one letter at a time. The interface updates in real time with each guess, showing correct or incorrect letters. Clean and minimal design, no frameworks or libraries required.</p>
                             <div className="flex flex-wrap gap-2 mb-4">
-                                {["React", "Node", "AWS", "Docker"].map((tech, key) => (
+                                {["JavaScript", "CSS", "HTML"].map((tech, key) => (
                                     <span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full textpsm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">{tech}</span>
                                 ))}
                             </div>
@@ -53,6 +58,9 @@ export const Projects = () => {
                     </div>
                 </div>
             </RevealOnScroll>
+            <EnterR>
+                <div className="right-0 top-1/2 -translate-y-1/2 w-16 h-64 bg-red-900/20 rounded"></div>
+            </EnterR>
         </section>
     )
 }
